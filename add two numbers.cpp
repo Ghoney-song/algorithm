@@ -16,11 +16,12 @@ public:
 
         while(1)
         {
-            int addval = (l1->val + l2->val+up) % 10;
+            int sum = l1->val + l2->val+up;
+            int addval = sum % 10;
 
             ListNode *a = new ListNode(addval);
             
-            if((l1->val + l2->val + up) >= 10)
+            if(sum >= 10)
             {
                 up = true;
             }
@@ -45,8 +46,10 @@ public:
         while(l1->next)
         {
             l1 = l1->next;
-            ListNode *a = new ListNode((l1->val + up) % 10);
-            if((l1->val + up) >= 10)
+            int sum = l1->val + up;
+            int addval = sum % 10;
+            ListNode *a = new ListNode(addval);
+            if(sum >= 10)
             {
                 up = true;
             }
@@ -60,8 +63,10 @@ public:
         while(l2->next)
         {            
             l2 = l2->next;
-            ListNode *a = new ListNode((l2->val + up) % 10);
-            if((l2->val + up) >= 10)
+            int sum = l2->val + up;
+            int addval = sum % 10;
+            ListNode *a = new ListNode(addval);
+            if(sum >= 10)
             {
                 up = true;
             }
